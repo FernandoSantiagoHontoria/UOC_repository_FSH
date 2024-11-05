@@ -55,6 +55,11 @@ SummarizedExperiment::metadata(SExperiment) = list( #se añaden los metadatos
   notas = "Los datos se dividen en dos subgrupos, los control y los que padecen caquexia. Los datos no están apareados. No se detectaron datos que falten. Dataset obtenido de https://rest.xialab.ca/api/download/metaboanalyst/human_cachexia.csv"
 )
 
+SummarizedExperiment::metadata(SExperiment$Tipos_metabolitos) = list (
+  descripcion = "Representa los metabolitos medidos en los individuos",
+  notas = "No se describen datos adicionales de procesamiento de muestras para la obtención de los datos"
+)
+
 SExperiment #se ejecuta 
 
 save(SExperiment, file = "Caquexia_SExperiment.Rda")
@@ -71,7 +76,4 @@ summary(SExperiment)
 ```
 
 
-```{r}
-usethisgit init 
-```
 
